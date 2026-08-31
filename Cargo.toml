@@ -1,12 +1,13 @@
 [package]
-name = "plot-surface"
+name = "plot-brain-surface"
 version = "0.1.0"
 edition = "2021"
 description = "Rust brain surface plotting"
 license = "MIT"
+repository = "https://github.com/thanhvd18/plot-brain-surface-rs"
 
 [[bin]]
-name = "plot-surface"
+name = "plot-brain-surface"
 path = "src/main.rs"
 
 [dependencies]

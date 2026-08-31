@@ -1,12 +1,12 @@
 use std::path::PathBuf;
 
 use clap::{Parser, Subcommand};
-use plot_surface::{
+use plot_brain_surface::{
     plot_brain_from_weights, AtlasKind, ColormapKind, PlotBrainOptions, Result,
 };
 
 #[derive(Parser, Debug)]
-#[command(name = "plot-surface", about = "Rust brain surface plotting")]
+#[command(name = "plot-brain-surface", about = "Rust brain surface plotting")]
 struct Cli {
     #[command(subcommand)]
     command: Commands,
@@ -17,7 +17,7 @@ enum Commands {
     /// Plot parcel weights on cortical surface meshes.
     Plot {
         /// Directory containing GIFTI meshes and .annot files.
-        #[arg(long, env = "PLOT_SURFACE_DATA_DIR")]
+        #[arg(long, env = "PLOT_BRAIN_SURFACE_DATA_DIR")]
         data_dir: PathBuf,
 
         /// CSV file with parcel weights (column: cortical_thickness or weight).
