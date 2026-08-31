@@ -974,7 +974,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "plot-surface"
+name = "plot-brain-surface"
 version = "0.1.0"
 dependencies = [
  "ab_glyph",
