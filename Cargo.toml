@@ -1,0 +1,27 @@
+[package]
+name = "plot-surface"
+version = "0.1.0"
+edition = "2021"
+description = "Rust brain surface plotting"
+license = "MIT"
+
+[[bin]]
+name = "plot-surface"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+base64 = "0.22"
+byteorder = "1"
+clap = { version = "4", features = ["derive", "env"] }
+csv = "1"
+ab_glyph = "0.2"
+image = "0.25"
+neuroformats = "0.4"
+quick-xml = { version = "0.37", features = ["serialize"] }
+thiserror = "2"
+flate2 = "1"
+
+[profile.release]
+lto = true
+codegen-units = 1
